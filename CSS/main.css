@@ -1,0 +1,110 @@
+@font-face{
+  font-family: 'Beau_Rivage';
+  src: url(../Fonts/Beau_Rivage/BeauRivage-Regular.ttf)
+  format('truetype');
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Poppins';
+  src: url(../Fonts/Poppins/Poppins-Regular.ttf)
+  format('truetype');
+  font-style: normal;
+}
+
+:root{
+  --primary: #171717;
+  --accent: #A58A65;
+  --background: #F5F2EB;
+  --font-heading: "Poppins", sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--background)
+}
+/*Navigation links and logo*/
+header{
+  width: 100%;
+  padding: 24px;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  color: #aec3e2;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 2dvh;
+  text-decoration: none;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 24px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.cart-link {
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 20px;
+    gap: 20px;
+}
+/*Main section design*/
+.banner{
+  position: relative;
+}
+
+img{
+  position: relative;
+  left: 3.5dvh;
+  width: 55dvh;
+  border: 1px solid var(--accent);
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+/*Brand Name header */
+.brand h1{
+  position: absolute;
+  inset: 0;                 /* fills the image */
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem 20%;
+  line-height: 1;
+  font-size: clamp(1.75rem, 8vw, 3rem);  /* shrinks on phones */
+  color: #fff;
+  font-family: var(--font-heading);
+  text-shadow: 4px 10px 14px black;
+}
+@media (min-width:768px){
+  .banner{
+    position: relative;
+  }
+  .banner img{
+    position: relative;
+    width: 50%;
+    height: 600px;
+  }
+  .brand h1{
+    font-size: clamp(3rem, 7vw, 6rem);
+  }
+}
